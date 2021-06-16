@@ -1,0 +1,60 @@
+<html>
+    <head>
+         <title>HARLEY STREET BOYS</title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="container">
+           <div class="navbar">
+               <img src="/media/logo.jpg" class="logo">
+               <ul>
+                   <li><a href="#">HOME</a></li>
+                   <li><a href="#">ABOUT</a></li>
+                   <li><a href="#">LIFESTYLE</a></li>
+                   <li><a href="#">CONNECT</a></li>
+               </ul>
+           </div>
+           <div class="content">
+               <div class="left-col">
+                   <h1>THE<br>HYPERSPACE<br>SOUND</h1>
+               </div>
+               <div class="right-col">
+                   <p>Click Here To Listen</p>
+                   <img src="/media/play.png" id="icon">
+               </div>
+           </div>
+       </div>
+
+       <div class="container-media">
+           <div class="row">
+               <div class="col-2">
+                   <img src="/media/vern.jpg" width="100%">
+               </div>
+               <div class="col-2">
+                   <img src="/media/bill.jpg" width="100%">
+               </div>
+           </div>
+       </div>
+
+       <audio id="ourSong">
+          <source src="media/bde.mp3" type="audio/mp3">  
+       </audio>
+
+       <script>
+           var ourSong = document.getElementById("ourSong");
+           var icon = document.getElementById("icon");
+
+           icon.onclick = function(){
+               if(ourSong.paused){
+                   ourSong.play();
+                   icon.src = "/media/pause.png";
+               }else{
+                ourSong.pause();
+                   icon.src = "/media/play.png";
+               }
+           }
+       </script>
+
+
+    </body>
+</html>
